@@ -1,1 +1,320 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>My Core Philosophy</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <style>
+    * {
+      box-sizing: border-box;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      background: radial-gradient(circle at top left, #f5f0ff, #f3f8ff 40%, #e9f5ff);
+      color: #1a1a1a;
+    }
+
+    .page {
+      max-width: 900px;
+      width: 100%;
+      margin: 32px 16px;
+      background: rgba(255, 255, 255, 0.96);
+      border-radius: 18px;
+      box-shadow: 0 18px 40px rgba(15, 23, 42, 0.16);
+      padding: 28px 24px 32px;
+      border: 1px solid rgba(148, 163, 184, 0.25);
+    }
+
+    header {
+      border-bottom: 1px solid rgba(148, 163, 184, 0.35);
+      padding-bottom: 18px;
+      margin-bottom: 24px;
+    }
+
+    .pill {
+      display: inline-flex;
+      align-items: center;
+      padding: 4px 10px;
+      border-radius: 999px;
+      font-size: 11px;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      background: rgba(59, 130, 246, 0.06);
+      color: #1d4ed8;
+      font-weight: 600;
+      margin-bottom: 10px;
+    }
+
+    h1 {
+      font-size: clamp(1.9rem, 2.4vw, 2.4rem);
+      margin: 0 0 6px;
+      letter-spacing: -0.03em;
+      color: #0f172a;
+    }
+
+    .subtitle {
+      margin: 0;
+      font-size: 0.98rem;
+      line-height: 1.5;
+      color: #64748b;
+    }
+
+    nav {
+      margin-top: 16px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    nav a {
+      font-size: 0.8rem;
+      padding: 6px 10px;
+      border-radius: 999px;
+      text-decoration: none;
+      border: 1px solid rgba(148, 163, 184, 0.6);
+      color: #475569;
+      background: #f8fafc;
+      transition: background 0.18s ease, border-color 0.18s ease,
+        transform 0.12s ease;
+    }
+
+    nav a:hover {
+      background: #e0edff;
+      border-color: #3b82f6;
+      transform: translateY(-1px);
+    }
+
+    main {
+      font-size: 0.98rem;
+      line-height: 1.7;
+      color: #1f2933;
+    }
+
+    section {
+      padding: 12px 0 10px;
+      border-bottom: 1px dashed rgba(203, 213, 225, 0.9);
+    }
+
+    section:last-of-type {
+      border-bottom: none;
+    }
+
+    h2 {
+      font-size: 1.1rem;
+      margin: 0 0 6px;
+      color: #0f172a;
+      letter-spacing: -0.01em;
+    }
+
+    .section-tagline {
+      font-size: 0.78rem;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: #94a3b8;
+      margin-bottom: 6px;
+    }
+
+    p {
+      margin: 0 0 8px;
+    }
+
+    ul {
+      margin: 6px 0 10px 18px;
+      padding: 0;
+    }
+
+    li {
+      margin-bottom: 4px;
+    }
+
+    .callout {
+      margin-top: 8px;
+      padding: 10px 12px;
+      border-radius: 12px;
+      background: #f8fafc;
+      border: 1px solid rgba(148, 163, 184, 0.45);
+      font-size: 0.86rem;
+      color: #475569;
+    }
+
+    footer {
+      margin-top: 24px;
+      padding-top: 14px;
+      border-top: 1px solid rgba(226, 232, 240, 0.9);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 10px;
+      font-size: 0.8rem;
+      color: #94a3b8;
+    }
+
+    .top-link {
+      margin-left: auto;
+      font-size: 0.8rem;
+      text-decoration: none;
+      padding: 6px 10px;
+      border-radius: 999px;
+      border: 1px solid rgba(148, 163, 184, 0.6);
+      color: #475569;
+      background: #f9fafb;
+      transition: background 0.18s ease, border-color 0.18s ease,
+        transform 0.12s ease;
+    }
+
+    .top-link:hover {
+      background: #e5edff;
+      border-color: #3b82f6;
+      transform: translateY(-1px);
+    }
+
+    @media (max-width: 600px) {
+      .page {
+        margin: 18px 10px;
+        padding: 22px 16px 24px;
+        border-radius: 16px;
+      }
+
+      nav {
+        flex-direction: row;
+      }
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+  </style>
+</head>
+<body>
+  <div class="page" id="top">
+    <header>
+      <div class="pill">Core Philosophy</div>
+      <h1>My Core Philosophy on Care, Ethics, and AI</h1>
+      <p class="subtitle">
+        This page presents my completed and reviewed philosophy in a clean,
+        shareable format. Text is taken from my
+        <strong>PHILOSOPHY.docx</strong> and organized into clear sections.
+      </p>
+
+      <nav>
+        <a href="#overview">Overview</a>
+        <a href="#core-values">Core Values & Principles</a>
+        <a href="#ai-role">The Role of AI</a>
+        <a href="#safeguards">Ethics & Safeguards</a>
+        <a href="#practice">Application in Practice</a>
+        <a href="#closing">Closing Reflection</a>
+      </nav>
+    </header>
+
+    <main>
+      <section id="overview">
+        <div class="section-tagline">Section 1</div>
+        <h2>Overview of My Core Philosophy</h2>
+        <p>
+          <!-- Paste your introductory/overview paragraph(s) from PHILOSOPHY.docx here. -->
+          <!-- Example placeholder text below – replace it completely with your own words. -->
+          My core philosophy is grounded in respect for human dignity, the
+          interconnectedness of body and mind, and a commitment to caring
+          relationships. I view technology and AI as tools that must remain in
+          service of human well-being, never as replacements for empathy,
+          discernment, or responsibility.
+        </p>
+      </section>
+
+      <section id="core-values">
+        <div class="section-tagline">Section 2</div>
+        <h2>Core Values & Guiding Principles</h2>
+        <p>
+          <!-- Replace this with your own paragraphs on values/principles. -->
+          My work is guided by values such as compassion, humility,
+          transparency, and cultural sensitivity. These principles shape how I
+          show up for patients, colleagues, and myself.
+        </p>
+        <ul>
+          <!-- You can keep or edit this list, or replace it with your own. -->
+          <li>Honor the whole person, not just their symptoms or data.</li>
+          <li>Prioritize safety, consent, and clear communication.</li>
+          <li>Center equity and accessibility in all systems of care.</li>
+        </ul>
+      </section>
+
+      <section id="ai-role">
+        <div class="section-tagline">Section 3</div>
+        <h2>The Role of AI in My Philosophy</h2>
+        <p>
+          <!-- Paste your AI philosophy section from PHILOSOPHY.docx here. -->
+          I understand AI as a supporting tool that can help with organization,
+          reflection, and education, but it cannot replace human judgment or
+          relational presence. Any AI system I use must align with my ethical
+          commitments and remain clearly secondary to practitioner–patient
+          trust.
+        </p>
+        <div class="callout">
+          <!-- Optional short callout you can customize. -->
+          <strong>Note:</strong> Whenever AI is involved, I commit to honesty
+          about its use, clear boundaries around its role, and ongoing
+          evaluation of its impact on real people.
+        </div>
+      </section>
+
+      <section id="safeguards">
+        <div class="section-tagline">Section 4</div>
+        <h2>Ethical Commitments & Safeguards</h2>
+        <p>
+          <!-- Replace with your own discussion of safeguards, risk, and ethics. -->
+          My ethical commitments include protecting privacy, honoring
+          confidentiality, and avoiding over-reliance on automated tools. I
+          recognize that AI systems can reflect bias, and I accept personal
+          responsibility for interrogating outputs, cross-checking sources, and
+          making final decisions.
+        </p>
+        <ul>
+          <li>Protect sensitive data and avoid unnecessary collection.</li>
+          <li>Use AI in ways that are explainable and accountable.</li>
+          <li>Encourage feedback when AI is part of any shared workflow.</li>
+        </ul>
+      </section>
+
+      <section id="practice">
+        <div class="section-tagline">Section 5</div>
+        <h2>Application in Practice</h2>
+        <p>
+          <!-- Paste your “how this philosophy shows up in practice” section here. -->
+          In concrete terms, this philosophy shapes how I design intake forms,
+          communicate with patients, collaborate with other practitioners, and
+          choose tools. Every workflow is evaluated against the question:
+          “Does this honor the person in front of me and support their
+          long-term well-being?”
+        </p>
+      </section>
+
+      <section id="closing">
+        <div class="section-tagline">Section 6</div>
+        <h2>Closing Reflection</h2>
+        <p>
+          <!-- Paste your concluding reflection here. -->
+          Ultimately, my core philosophy is a living document. As I grow through
+          study, clinical experience, and feedback from patients and peers, I
+          expect this philosophy to deepen—but its heart will remain the same:
+          to practice with integrity, compassion, and thoughtful use of
+          technology in service of healing.
+        </p>
+      </section>
+    </main>
+
+    <footer>
+      <span>My Core Philosophy &mdash; Version 1.0</span>
+      <a href="#top" class="top-link">Back to top</a>
+    </footer>
+  </div>
+</body>
+</html>
